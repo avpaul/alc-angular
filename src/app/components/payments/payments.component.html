@@ -1,0 +1,28 @@
+<section class="payment-container">
+  <h5>Your Monthly Payments</h5>
+  <p>Base Calculations</p>
+  <table>
+    <thead>
+      <tr>
+        <td>Loan Amount</td>
+        <td>Interest rates</td>
+        <td>Number of Years</td>
+        <td>Monthly Payments</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="!payment?.monthlyPayment">
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr *ngIf="payment?.monthlyPayment">
+        <td>{{ payment.amount | currencyComma }}</td>
+        <td>{{ payment.interest }}</td>
+        <td>{{ payment.years }}</td>
+        <td>{{ payment.monthlyPayment.toFixed(2) | currencyComma }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

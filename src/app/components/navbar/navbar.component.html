@@ -1,0 +1,12 @@
+<nav>
+  <a class="black-text navbar-brand">Waret</a>
+  <a
+    *ngIf="!auth.isAuthenticated()"
+    [routerLink]="['/login']"
+    class="black-text"
+    >Login</a
+  >
+  <a *ngIf="auth.isAuthenticated()" [routerLink]="['/login']" class="black-text"
+    >Welcome {{ auth.user.username }}</a
+  >
+</nav>

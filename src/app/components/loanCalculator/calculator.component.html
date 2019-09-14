@@ -1,0 +1,60 @@
+<div class="calc-container">
+  <h5>Simple Loan Calculator</h5>
+
+  <div class="divider"></div>
+  <div class="section">
+    <span class="badge">1</span>
+    <p>Loan Amount</p>
+    <div class="flex-spacer"></div>
+
+    <div class="input-wrapper">
+      <span>FRW</span
+      ><input
+        class="browser-default input"
+        type="number"
+        (input)="loan.amount = $event.target.value"
+        placeholder="30000000"
+      />
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="section">
+    <span class="badge">2</span>
+    <p>Loan Interest</p>
+    <div class="flex-spacer"></div>
+
+    <div class="input-wrapper">
+      <input
+        class="browser-default input"
+        type="number"
+        (input)="loan.interest = $event.target.value"
+        placeholder="8"
+      /><span>%</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="section">
+    <span class="badge">3</span>
+    <p>Number of Years</p>
+    <div class="flex-spacer"></div>
+
+    <div class="input-wrapper">
+      <input
+        class="browser-default input"
+        type="number"
+        (input)="loan.years = $event.target.value"
+        placeholder="30"
+      />
+      <span>Yrs</span>
+    </div>
+  </div>
+  <div class="row">
+    <button class="btn btn-flat black white-text" (click)="calculatePayments()">
+      Calculate
+    </button>
+  </div>
+</div>
+
+<app-loan-payment [payment]="loan"></app-loan-payment>

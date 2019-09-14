@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: "Varela Round", sans-serif;
+}
+
+body {
+  background-color: #f1f5f8;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 12.5%;
+  background-color: #f1f5f8;
+}
+.navbar-brand {
+  font-size: 24px;
+}
+.calc-container,
+.payment-container {
+  background-color: #ffffff;
+  width: 65%;
+  margin: 32px auto;
+  padding: 24px 16px;
+}
+
+.calc-container {
+  .section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      padding-left: 16px;
+      min-width: 200px;
+    }
+    .flex-spacer {
+      flex-basis: 100%;
+    }
+  }
+  .badge {
+    color: #000000;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.input-wrapper {
+  min-width: 240px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+}
+.input {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 8px;
+  box-shadow: none;
+  box-sizing: content-box;
+  min-width: 170px;
+}
+
+.login-section {
+  width: 25%;
+  margin: 124px auto;
+
+  .input-wrapper {
+    margin: 32px 0;
+    input {
+      width: 70%;
+    }
+  }
+}

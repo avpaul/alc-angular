@@ -1,0 +1,27 @@
+<div class="login-section">
+  <div class="input-wrapper">
+    <span>Email:</span>
+    <input
+      class="browser-default input"
+      type="email"
+      [(ngModel)]="user.email"
+      placeholder="you@company.com"
+    />
+  </div>
+
+  <div class="input-wrapper">
+    <span>Password:</span>
+    <input
+      class="browser-default input"
+      type="password"
+      [(ngModel)]="user.password"
+      placeholder="password"
+    />
+  </div>
+
+  <div class="row">
+    <button class="btn btn-flat black white-text" (click)="logInUser()">
+      Login
+    </button>
+  </div>
+</div>
